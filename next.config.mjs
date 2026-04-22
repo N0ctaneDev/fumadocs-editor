@@ -5,6 +5,7 @@ const withMDX = createMDX();
 /** @type {import('next').NextConfig} */
 const config = {
   output: 'export',
+  basePath: '/fumadocs-editor',
   reactStrictMode: true,
   images: {
     remotePatterns: [
