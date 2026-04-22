@@ -24,23 +24,19 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-
       - name: Set node
         uses: actions/setup-node@v4
         with:
           # 根据需要设置 Node.js 版本
           # node-version: lts/*
           node-version: '24'
-          cache: pnpm
-          registry-url: 'https://registry.npmjs.org'
+          cache: npm
 
       - name: Install dependencies
-        run: pnpm i
+        run: npm ci
 
       - name: Run build script
-        run: pnpm run build
+        run: npm run build
 
       - name: Create .nojekyll file
         run: touch ./out/.nojekyll
