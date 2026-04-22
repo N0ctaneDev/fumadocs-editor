@@ -1,5 +1,6 @@
 {
   "name": "fumadocs-online-editor",
+  "packageManager": "pnpm@8.15.4",
   "version": "0.0.0",
   "private": true,
   "scripts": {
